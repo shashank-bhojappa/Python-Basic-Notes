@@ -1,0 +1,87 @@
+2021-06-06 14:20:47,729 The connection is established!!
+2021-06-06 14:20:47,731 Table created
+2021-06-06 14:20:47,734 127.0.0.1 - - [06/Jun/2021 14:20:47] "POST /mongodb/create_table HTTP/1.1" 200 -
+2021-06-06 14:36:48,925 The connection is established!!
+2021-06-06 14:36:48,943 [Errno 22] Invalid argument: '# E:\\Full_Stack_data_science\\Python\\mySQL\\19.2.MySQL\\Imp files\\estonia-passenger-list.csv'
+2021-06-06 14:36:48,946 127.0.0.1 - - [06/Jun/2021 14:36:48] "POST /mongodb/bulk_data HTTP/1.1" 200 -
+2021-06-06 14:38:41,493 The connection is established!!
+2021-06-06 14:38:41,561 Table created
+2021-06-06 14:38:41,562 127.0.0.1 - - [06/Jun/2021 14:38:41] "POST /mongodb/create_table HTTP/1.1" 200 -
+2021-06-06 14:39:05,053 The connection is established!!
+2021-06-06 14:39:05,054 [Errno 22] Invalid argument: '# E:\\Full_Stack_data_science\\Python\\mySQL\\19.2.MySQL\\Imp files\\estonia-passenger-list.csv'
+2021-06-06 14:39:05,055 127.0.0.1 - - [06/Jun/2021 14:39:05] "POST /mongodb/bulk_data HTTP/1.1" 200 -
+2021-06-06 14:39:16,429 The connection is established!!
+2021-06-06 14:39:16,430 [Errno 22] Invalid argument: '# E:\\Full_Stack_data_science\\Python\\mySQL\\19.2.MySQL\\Imp files\\estonia-passenger-list.csv'
+2021-06-06 14:39:16,431 127.0.0.1 - - [06/Jun/2021 14:39:16] "POST /mongodb/bulk_data HTTP/1.1" 200 -
+2021-06-06 14:42:16,531 The connection is established!!
+2021-06-06 14:42:16,532 [Errno 22] Invalid argument: '# E:\\Full_Stack_data_science\\Python\\mySQL\\19.2.MySQL\\Imp files\\estonia-passenger-list.csv'
+2021-06-06 14:42:16,535 127.0.0.1 - - [06/Jun/2021 14:42:16] "POST /mongodb/bulk_data HTTP/1.1" 200 -
+2021-06-06 14:43:49,623 The connection is established!!
+2021-06-06 14:43:49,625 [Errno 22] Invalid argument: '# E:\\Full_Stack_data_science\\Python\\mySQL\\19.2.MySQL\\Imp files\\estonia-passenger-list.csv'
+2021-06-06 14:43:49,627 127.0.0.1 - - [06/Jun/2021 14:43:49] "POST /mongodb/bulk_data HTTP/1.1" 200 -
+2021-06-06 14:45:31,248 The connection is established!!
+2021-06-06 14:45:33,309 Importing data into database done
+2021-06-06 14:45:33,312 127.0.0.1 - - [06/Jun/2021 14:45:33] "POST /mongodb/bulk_data HTTP/1.1" 200 -
+2021-06-06 14:59:19,793 The connection is established!!
+2021-06-06 14:59:19,986 Single record inserted
+2021-06-06 14:59:19,989 127.0.0.1 - - [06/Jun/2021 14:59:19] "POST /mongodb/single_data HTTP/1.1" 200 -
+2021-06-06 15:09:49,780 The connection is established!!
+2021-06-06 15:09:49,780 document must be an instance of dict, bson.son.SON, bson.raw_bson.RawBSONDocument, or a type that inherits from collections.MutableMapping
+2021-06-06 15:09:49,781 127.0.0.1 - - [06/Jun/2021 15:09:49] "POST /mongodb/single_data HTTP/1.1" 200 -
+2021-06-06 15:11:28,402 Exception on /mongodb/single_data [POST]
+Traceback (most recent call last):
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:/Full_Stack_data_science/Python/flask/dynamic_class_based/main.py", line 213, in mongodb_single_data
+    record = request.json['record']
+KeyError: 'record'
+2021-06-06 15:11:28,404 127.0.0.1 - - [06/Jun/2021 15:11:28] "[35m[1mPOST /mongodb/single_data HTTP/1.1[0m" 500 -
+2021-06-06 15:13:29,707 The connection is established!!
+2021-06-06 15:13:29,883 Multiple records inserted
+2021-06-06 15:13:29,885 127.0.0.1 - - [06/Jun/2021 15:13:29] "POST /mongodb/multiple_data HTTP/1.1" 200 -
+2021-06-06 15:32:57,437 The connection is established!!
+2021-06-06 15:32:58,087 Record updated
+2021-06-06 15:32:58,088 Exception on /mongodb/update_data [POST]
+Traceback (most recent call last):
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1535, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1699, in make_response
+    f"The view function for {request.endpoint!r} did not"
+TypeError: The view function for 'mongodb_update_data' did not return a valid response. The function either returned None or ended without a return statement.
+2021-06-06 15:32:58,089 127.0.0.1 - - [06/Jun/2021 15:32:58] "[35m[1mPOST /mongodb/update_data HTTP/1.1[0m" 500 -
+2021-06-06 15:34:02,113 The connection is established!!
+2021-06-06 15:34:02,161 Record updated
+2021-06-06 15:34:02,162 Exception on /mongodb/update_data [POST]
+Traceback (most recent call last):
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1516, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1535, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1699, in make_response
+    f"The view function for {request.endpoint!r} did not"
+TypeError: The view function for 'mongodb_update_data' did not return a valid response. The function either returned None or ended without a return statement.
+2021-06-06 15:34:02,163 127.0.0.1 - - [06/Jun/2021 15:34:02] "[35m[1mPOST /mongodb/update_data HTTP/1.1[0m" 500 -
+2021-06-06 15:39:03,077 The connection is established!!
+2021-06-06 15:39:03,133 Record updated
+2021-06-06 15:39:03,134 127.0.0.1 - - [06/Jun/2021 15:39:03] "POST /mongodb/update_data HTTP/1.1" 200 -
+2021-06-06 18:24:31,130 The connection is established!!
+2021-06-06 18:24:31,590 Record deleted from the table
+2021-06-06 18:24:31,592 127.0.0.1 - - [06/Jun/2021 18:24:31] "POST /mongodb/delete_data HTTP/1.1" 200 -
+2021-06-06 18:26:07,542 The connection is established!!
+2021-06-06 18:26:07,587 Record deleted from the table
+2021-06-06 18:26:07,587 127.0.0.1 - - [06/Jun/2021 18:26:07] "POST /mongodb/delete_data HTTP/1.1" 200 -
+2021-06-06 18:40:01,542 The connection is established!!
+2021-06-06 18:40:09,627 Downloaded records into csv file
+2021-06-06 18:40:09,631 127.0.0.1 - - [06/Jun/2021 18:40:09] "POST /mongodb/download_data HTTP/1.1" 200 -

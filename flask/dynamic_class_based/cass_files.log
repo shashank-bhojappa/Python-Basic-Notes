@@ -1,0 +1,300 @@
+2021-06-06 19:09:32,953 Connection established...3.11.10
+2021-06-06 19:09:32,954 127.0.0.1 - - [06/Jun/2021 19:09:32] "POST /cassandra/create_table HTTP/1.1" 200 -
+2021-06-06 19:27:38,627 Connection established...3.11.10
+2021-06-06 19:27:38,738 Exception on /cassandra/create_table [POST]
+Traceback (most recent call last):
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:/Full_Stack_data_science/Python/flask/dynamic_class_based/main.py", line 302, in cassandra_create_table
+    table_creation.create_table(session,database_name,table_name,query_info)
+  File "E:\Full_Stack_data_science\Python\flask\dynamic_class_based\database_backend.py", line 255, in create_table
+    session.execute(query).one()
+  File "cassandra\cluster.py", line 2618, in cassandra.cluster.Session.execute
+  File "cassandra\cluster.py", line 4894, in cassandra.cluster.ResponseFuture.result
+cassandra.InvalidRequest: Error from server: code=2200 [Invalid query] message="No PRIMARY KEY specifed (exactly one required)"
+2021-06-06 19:27:38,776 127.0.0.1 - - [06/Jun/2021 19:27:38] "[35m[1mPOST /cassandra/create_table HTTP/1.1[0m" 500 -
+2021-06-06 19:28:27,108 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 19:28:28,635 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 19:28:30,163 Closing connection <AsyncoreConnection(2368652886280) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 19:28:30,164 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 19:28:31,750 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 19:28:33,014 Connection established...3.11.10
+2021-06-06 19:28:37,778 127.0.0.1 - - [06/Jun/2021 19:28:37] "POST /cassandra/create_table HTTP/1.1" 200 -
+2021-06-06 19:32:25,520 Connection established...3.11.10
+2021-06-06 19:32:27,124 Table created
+2021-06-06 19:32:27,125 127.0.0.1 - - [06/Jun/2021 19:32:27] "POST /cassandra/create_table HTTP/1.1" 200 -
+2021-06-06 19:54:01,032 Connection established...3.11.10
+2021-06-06 19:54:01,207 <Error from server: code=2000 [Syntax error in CQL query] message="line 1:31 no viable alternative at input 'PassengerId' (INSERT INTO first_test.estonia(['PassengerI]...)">
+2021-06-06 19:54:01,207 127.0.0.1 - - [06/Jun/2021 19:54:01] "POST /cassandra/single_data HTTP/1.1" 200 -
+2021-06-06 19:55:15,579 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 19:55:17,102 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 19:55:18,658 Closing connection <AsyncoreConnection(2967228613000) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 19:55:18,659 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 19:55:20,232 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 19:55:21,495 Connection established...3.11.10
+2021-06-06 19:55:21,796 Single Data inserted
+2021-06-06 19:55:21,796 127.0.0.1 - - [06/Jun/2021 19:55:21] "POST /cassandra/single_data HTTP/1.1" 200 -
+2021-06-06 20:10:18,601 Connection established...3.11.10
+2021-06-06 20:10:18,642 <Error from server: code=2000 [Syntax error in CQL query] message="line 1:39 no viable alternative at input ':' (UPDATE first_test.estonia SET Firstname[:]...)">
+2021-06-06 20:10:18,643 127.0.0.1 - - [06/Jun/2021 20:10:18] "POST /cassandra/update_data HTTP/1.1" 200 -
+2021-06-06 20:11:53,586 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 20:11:55,125 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 20:11:56,651 Closing connection <AsyncoreConnection(2174418335816) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 20:11:56,652 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 20:11:58,251 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 20:11:59,544 Connection established...3.11.10
+2021-06-06 20:11:59,621 Error from server: code=2200 [Invalid query] message="Some partition key parts are missing: passengerid"
+2021-06-06 20:11:59,623 127.0.0.1 - - [06/Jun/2021 20:11:59] "POST /cassandra/update_data HTTP/1.1" 200 -
+2021-06-06 20:12:53,843 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 20:12:55,354 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 20:12:56,885 Closing connection <AsyncoreConnection(2174419191880) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 20:12:56,886 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 20:12:58,418 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 20:12:59,737 Connection established...3.11.10
+2021-06-06 20:12:59,756 Data updated inside the table
+2021-06-06 20:12:59,757 127.0.0.1 - - [06/Jun/2021 20:12:59] "POST /cassandra/update_data HTTP/1.1" 200 -
+2021-06-06 20:40:31,640 Connection established...3.11.10
+2021-06-06 20:40:31,854 Data deleted from the table
+2021-06-06 20:40:31,855 127.0.0.1 - - [06/Jun/2021 20:40:31] "POST /cassandra/delete_data HTTP/1.1" 200 -
+2021-06-06 22:08:06,041 Connection established...3.11.10
+2021-06-06 22:08:06,200 <Error from server: code=2000 [Syntax error in CQL query] message="line 1:104 no viable alternative at character '%'">
+2021-06-06 22:08:06,203 127.0.0.1 - - [06/Jun/2021 22:08:06] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:10:42,197 Connection established...3.11.10
+2021-06-06 22:10:42,300 Error from server: code=2200 [Invalid query] message="Invalid STRING constant (62) for "age" of type int"
+2021-06-06 22:10:42,301 127.0.0.1 - - [06/Jun/2021 22:10:42] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:15:01,852 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:15:03,332 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:15:04,888 Closing connection <AsyncoreConnection(1433655474312) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:15:04,889 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:15:06,470 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:15:07,744 Connection established...3.11.10
+2021-06-06 22:15:08,419 Error from server: code=2200 [Invalid query] message="Unknown function str called"
+2021-06-06 22:15:08,420 127.0.0.1 - - [06/Jun/2021 22:15:08] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:16:11,259 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:16:12,782 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:16:14,311 Closing connection <AsyncoreConnection(1433656105224) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:16:14,312 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:16:15,980 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:16:17,132 Connection established...3.11.10
+2021-06-06 22:16:17,193 Error from server: code=2200 [Invalid query] message="Unknown function varchar called"
+2021-06-06 22:16:17,194 127.0.0.1 - - [06/Jun/2021 22:16:17] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:17:09,800 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:17:11,261 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:17:12,786 Closing connection <AsyncoreConnection(1433656581128) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:17:12,787 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:17:14,404 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:17:15,697 Connection established...3.11.10
+2021-06-06 22:17:15,715 Error from server: code=2200 [Invalid query] message="Unknown function int called"
+2021-06-06 22:17:15,715 127.0.0.1 - - [06/Jun/2021 22:17:15] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:31:27,839 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:31:29,387 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:31:30,937 Closing connection <AsyncoreConnection(1433656868680) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:31:30,937 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:31:32,609 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:31:33,859 Connection established...3.11.10
+2021-06-06 22:31:33,884 unsupported format character ')' (0x29) at index 120
+2021-06-06 22:31:33,885 127.0.0.1 - - [06/Jun/2021 22:31:33] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:32:01,724 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:32:03,253 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:32:04,789 Closing connection <AsyncoreConnection(1433674366024) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:32:04,789 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:32:06,446 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:32:07,594 Connection established...3.11.10
+2021-06-06 22:32:07,602 Error from server: code=2200 [Invalid query] message="Invalid STRING constant (62) for "age" of type int"
+2021-06-06 22:32:07,603 127.0.0.1 - - [06/Jun/2021 22:32:07] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:34:13,897 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:34:15,394 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:34:16,890 Closing connection <AsyncoreConnection(1433674657672) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:34:16,891 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:34:18,464 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:34:19,828 Connection established...3.11.10
+2021-06-06 22:34:19,830 %d format: a number is required, not str
+2021-06-06 22:34:19,831 127.0.0.1 - - [06/Jun/2021 22:34:19] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:36:01,727 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:03,228 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:04,790 Closing connection <AsyncoreConnection(1433675183304) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:36:04,791 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:06,330 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:36:07,584 Connection established...3.11.10
+2021-06-06 22:36:07,585 %d format: a number is required, not str
+2021-06-06 22:36:07,587 127.0.0.1 - - [06/Jun/2021 22:36:07] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:36:27,607 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:29,134 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:30,665 Closing connection <AsyncoreConnection(1433675255688) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:36:30,666 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:32,240 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:36:33,487 Connection established...3.11.10
+2021-06-06 22:36:33,488 %d format: a number is required, not str
+2021-06-06 22:36:33,489 127.0.0.1 - - [06/Jun/2021 22:36:33] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 22:36:56,536 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:58,063 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:36:59,583 Closing connection <AsyncoreConnection(1433677168456) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 22:36:59,584 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 22:37:01,166 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 22:37:02,465 Connection established...3.11.10
+2021-06-06 22:37:02,466 %d format: a number is required, not str
+2021-06-06 22:37:02,467 127.0.0.1 - - [06/Jun/2021 22:37:02] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 23:15:19,218 Connection established...3.11.10
+2021-06-06 23:15:19,370 %d format: a number is required, not str
+2021-06-06 23:15:19,372 127.0.0.1 - - [06/Jun/2021 23:15:19] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 23:15:37,813 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 23:15:39,338 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 23:15:40,870 Closing connection <AsyncoreConnection(2423195444936) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-06 23:15:40,883 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-06 23:15:42,958 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-06 23:15:45,290 Connection established...3.11.10
+2021-06-06 23:16:02,187 Done inserting bulk data inside the table
+2021-06-06 23:16:02,188 127.0.0.1 - - [06/Jun/2021 23:16:02] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 23:26:57,667 Connection established...3.11.10
+2021-06-06 23:26:57,726 not enough arguments for format string
+2021-06-06 23:26:57,727 127.0.0.1 - - [06/Jun/2021 23:26:57] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 23:36:35,389 Connection established...3.11.10
+2021-06-06 23:36:35,390 not enough arguments for format string
+2021-06-06 23:36:35,391 127.0.0.1 - - [06/Jun/2021 23:36:35] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-06 23:39:54,544 Connection established...3.11.10
+2021-06-06 23:40:12,875 Done inserting bulk data inside the table
+2021-06-06 23:40:12,877 127.0.0.1 - - [06/Jun/2021 23:40:12] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 00:06:56,346 Connection established...3.11.10
+2021-06-07 00:06:56,385 not enough arguments for format string
+2021-06-07 00:06:56,386 127.0.0.1 - - [07/Jun/2021 00:06:56] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 00:10:13,956 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 00:10:15,391 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 00:10:16,932 Closing connection <AsyncoreConnection(2014200697992) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-07 00:10:16,933 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 00:10:18,753 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-07 00:10:19,932 Connection established...3.11.10
+2021-06-07 00:10:19,959 not enough arguments for format string
+2021-06-07 00:10:19,959 127.0.0.1 - - [07/Jun/2021 00:10:19] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 00:29:47,221 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 00:29:48,701 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 00:29:50,232 Closing connection <AsyncoreConnection(2014201314440) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-07 00:29:50,241 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 00:29:52,752 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-07 00:29:54,355 Connection established...3.11.10
+2021-06-07 00:29:54,544 not enough arguments for format string
+2021-06-07 00:29:54,876 127.0.0.1 - - [07/Jun/2021 00:29:54] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 00:32:41,994 Connection established...3.11.10
+2021-06-07 00:32:42,048 not all arguments converted during string formatting
+2021-06-07 00:32:42,050 127.0.0.1 - - [07/Jun/2021 00:32:42] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 00:38:27,990 Connection established...3.11.10
+2021-06-07 00:38:27,992 not all arguments converted during string formatting
+2021-06-07 00:38:27,994 127.0.0.1 - - [07/Jun/2021 00:38:27] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 00:39:23,646 Connection established...3.11.10
+2021-06-07 00:39:23,648 not enough arguments for format string
+2021-06-07 00:39:23,650 127.0.0.1 - - [07/Jun/2021 00:39:23] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:13:10,506 Connection established...3.11.10
+2021-06-07 09:13:10,677 not enough arguments for format string
+2021-06-07 09:13:10,679 127.0.0.1 - - [07/Jun/2021 09:13:10] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:14:29,674 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:14:31,200 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:14:32,724 Closing connection <AsyncoreConnection(2315920420808) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-07 09:14:32,725 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:14:34,413 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-07 09:14:35,614 Connection established...3.11.10
+2021-06-07 09:14:35,616 not enough arguments for format string
+2021-06-07 09:14:35,617 127.0.0.1 - - [07/Jun/2021 09:14:35] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:15:58,519 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:16:00,062 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:16:01,618 Closing connection <AsyncoreConnection(2315921271496) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-07 09:16:01,618 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:16:03,199 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-07 09:16:04,568 Connection established...3.11.10
+2021-06-07 09:16:04,569 not enough arguments for format string
+2021-06-07 09:16:04,569 127.0.0.1 - - [07/Jun/2021 09:16:04] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:16:50,082 Downgrading core protocol version from 66 to 65 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:16:51,614 Downgrading core protocol version from 65 to 5 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:16:53,151 Closing connection <AsyncoreConnection(2315921747336) 127.0.0.1:9042> due to protocol error: Error from server: code=000a [Protocol error] message="Beta version of the protocol used (5/v5-beta), but USE_BETA flag is unset"
+2021-06-07 09:16:53,152 Downgrading core protocol version from 5 to 4 for 127.0.0.1:9042. To avoid this, it is best practice to explicitly set Cluster(protocol_version) to the version supported by your cluster. http://datastax.github.io/python-driver/api/cassandra/cluster.html#cassandra.cluster.Cluster.protocol_version
+2021-06-07 09:16:55,423 Using datacenter 'datacenter1' for DCAwareRoundRobinPolicy (via host '127.0.0.1:9042'); if incorrect, please specify a local_dc to the constructor, or limit contact points to local cluster nodes
+2021-06-07 09:16:55,989 Connection established...3.11.10
+2021-06-07 09:16:55,990 %d format: a number is required, not str
+2021-06-07 09:16:55,991 127.0.0.1 - - [07/Jun/2021 09:16:55] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:18:29,293 Connection established...3.11.10
+2021-06-07 09:18:29,296 not all arguments converted during string formatting
+2021-06-07 09:18:29,297 127.0.0.1 - - [07/Jun/2021 09:18:29] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:22:34,023 Connection established...3.11.10
+2021-06-07 09:22:34,052 not all arguments converted during string formatting
+2021-06-07 09:22:34,054 127.0.0.1 - - [07/Jun/2021 09:22:34] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:28:42,007 Connection established...3.11.10
+2021-06-07 09:28:42,037 not all arguments converted during string formatting
+2021-06-07 09:28:42,038 127.0.0.1 - - [07/Jun/2021 09:28:42] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:32:05,616 Connection established...3.11.10
+2021-06-07 09:32:21,644 Done inserting bulk data inside the table
+2021-06-07 09:32:21,645 127.0.0.1 - - [07/Jun/2021 09:32:21] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:36:16,426 Connection established...3.11.10
+2021-06-07 09:36:16,470 not all arguments converted during string formatting
+2021-06-07 09:36:16,472 127.0.0.1 - - [07/Jun/2021 09:36:16] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:41:55,419 Connection established...3.11.10
+2021-06-07 09:41:55,430 not all arguments converted during string formatting
+2021-06-07 09:41:55,432 127.0.0.1 - - [07/Jun/2021 09:41:55] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:42:36,875 Connection established...3.11.10
+2021-06-07 09:42:36,878 not all arguments converted during string formatting
+2021-06-07 09:42:36,880 127.0.0.1 - - [07/Jun/2021 09:42:36] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:43:49,235 Connection established...3.11.10
+2021-06-07 09:43:49,253 not all arguments converted during string formatting
+2021-06-07 09:43:49,255 127.0.0.1 - - [07/Jun/2021 09:43:49] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 09:59:38,482 Connection established...3.11.10
+2021-06-07 09:59:38,891 Error from server: code=2200 [Invalid query] message="Invalid STRING constant (int(value[5])) for "age" of type int"
+2021-06-07 09:59:38,893 127.0.0.1 - - [07/Jun/2021 09:59:38] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 10:01:00,352 Connection established...3.11.10
+2021-06-07 10:01:00,405 Error from server: code=2200 [Invalid query] message="Invalid STRING constant (int(value[5])) for "age" of type int"
+2021-06-07 10:01:00,408 127.0.0.1 - - [07/Jun/2021 10:01:00] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 10:27:59,628 Connection established...3.11.10
+2021-06-07 10:28:20,084 Done inserting bulk data inside the table
+2021-06-07 10:28:20,085 127.0.0.1 - - [07/Jun/2021 10:28:20] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 10:31:09,582 Connection established...3.11.10
+2021-06-07 10:31:09,659 not enough arguments for format string
+2021-06-07 10:31:09,663 127.0.0.1 - - [07/Jun/2021 10:31:09] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 10:43:48,312 Connection established...3.11.10
+2021-06-07 10:43:48,337 not enough arguments for format string
+2021-06-07 10:43:48,339 127.0.0.1 - - [07/Jun/2021 10:43:48] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 10:51:39,830 Connection established...3.11.10
+2021-06-07 10:51:39,944 Error from server: code=2200 [Invalid query] message="Invalid STRING constant (62) for "age" of type int"
+2021-06-07 10:51:39,945 127.0.0.1 - - [07/Jun/2021 10:51:39] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 11:10:08,798 Exception on /cassandra/bulk_data [POST]
+Traceback (most recent call last):
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:/Full_Stack_data_science/Python/flask/dynamic_class_based/main.py", line 315, in bulk_data_cass
+    #column_places = request.json['column_places']
+KeyError: 'column_places'
+2021-06-07 11:10:08,891 127.0.0.1 - - [07/Jun/2021 11:10:08] "[35m[1mPOST /cassandra/bulk_data HTTP/1.1[0m" 500 -
+2021-06-07 11:11:16,382 Connection established...3.11.10
+2021-06-07 11:11:16,848 Error from server: code=2200 [Invalid query] message="Unmatched column names/values"
+2021-06-07 11:11:16,850 127.0.0.1 - - [07/Jun/2021 11:11:16] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 11:12:16,364 Connection established...3.11.10
+2021-06-07 11:12:16,398 Error from server: code=2200 [Invalid query] message="Unmatched column names/values"
+2021-06-07 11:12:16,400 127.0.0.1 - - [07/Jun/2021 11:12:16] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 12:00:13,970 Connection established...3.11.10
+2021-06-07 12:00:33,331 Done inserting bulk data inside the table
+2021-06-07 12:00:33,331 127.0.0.1 - - [07/Jun/2021 12:00:33] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 12:01:21,653 Connection established...3.11.10
+2021-06-07 12:01:40,463 Done inserting bulk data inside the table
+2021-06-07 12:01:40,464 127.0.0.1 - - [07/Jun/2021 12:01:40] "POST /cassandra/bulk_data HTTP/1.1" 200 -
+2021-06-07 12:11:52,497 Exception on /cassandra/bulk_data [POST]
+Traceback (most recent call last):
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Shashank\anaconda3\envs\pythonProject\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "E:/Full_Stack_data_science/Python/flask/dynamic_class_based/main.py", line 314, in bulk_data_cass
+    column_names = request.json['column_names']
+KeyError: 'column_names'
+2021-06-07 12:11:52,741 127.0.0.1 - - [07/Jun/2021 12:11:52] "[35m[1mPOST /cassandra/bulk_data HTTP/1.1[0m" 500 -
+2021-06-07 12:13:47,782 127.0.0.1 - - [07/Jun/2021 12:13:47] "[33mPOST /cassandra/download_data HTTP/1.1[0m" 404 -
